@@ -1,2 +1,3 @@
-# EMGFilter
-TTC EMG/LocCode Grouping and Filter using Apache eCharts and React.
+# EMG / LocCode
+
+Grouping and charting for EMG and locCode for

@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: theme(backgroundColor.m-blue.100);
+    height: max-content;
+    min-height: 100%;
+}
+
+.is-updating {
+    position: relative;
+}
+
+.is-updating::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    top: 0;
+    left: 0;
+}
+
+.data-filter-toggle .checkbox_wrap{
+	position: relative;
+	display: block;
+	cursor: pointer;
+	width: 50px;
+}
+
+.data-filter-toggle:last-child .checkbox_wrap{
+	margin-bottom: 0;
+}
+
+.data-filter-toggle .checkbox_wrap .checkbox_inp{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+}
+
+.data-filter-toggle .checkbox_wrap .checkbox_mark{
+	display: inline-block;
+	position: relative;
+	border-radius: 25px;
+}
+
+.data-filter-toggle .checkbox_wrap .checkbox_mark:before,
+.data-filter-toggle .checkbox_wrap .checkbox_mark:after{
+	content: "";
+	position: absolute;
+	transition: all 0.5s ease;
+}
+
+.data-filter-toggle .checkbox_wrap .checkbox_mark{
+	background: #f0f0f0;
+	width: 50px;
+	height: 25px;
+	padding: 2px;
+}
+
+.data-filter-toggle .checkbox_wrap .checkbox_mark:before{
+	top: 3px;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.data-filter-toggle .checkbox_wrap .checkbox_inp.active ~ .checkbox_mark{
+	background: #34bfa3;
+}
+
+.data-filter-toggle .checkbox_wrap .checkbox_inp.active ~ .checkbox_mark:before{
+	left: 30px;
+}

@@ -1,0 +1,92 @@
+/* * {
+    --header-top: 139px;
+} */
+
+.custom-chart-content {
+    display: flex;
+    height: 100%;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+.kpi-list ul {
+    max-height: calc(100vh - 169px);
+}
+
+.item-wrapper {
+    background-color: theme(backgroundColor.m-black.100);
+    color: theme(textColor.m-black.900);
+    position: relative;
+    font-weight: 300;
+}
+
+.item-wrapper:hover {
+    background-color: theme(backgroundColor.m-black.200);
+}
+
+.kpi-item {
+    width: 200px;
+    overflow-x: clip;
+    padding: 4px 8px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.kpi-item.selected {
+    background-color: theme(backgroundColor.m-black.900);
+    color: theme(textColor.m-black.100);
+    font-weight: 300;
+}
+
+.option-container {
+    display: none;
+    width: max-content;
+    border-radius: 4px;
+    position: absolute;
+    flex-direction: row;
+    z-index: 5;
+    top: 0;
+    left: 100%;
+
+}
+
+.kpi-item:hover + .option-container, .option-container:hover {
+    display: flex;
+}
+
+.option {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 6px;
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+.selected-kpi-wrapper {
+    max-width: 1400px;
+    scrollbar-width: thin;
+}
+
+
+.custom-chart {
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.custom-chart-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.echarts-for-react {
+    height: 100%;
+}
